@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test && npx playwright show-report",
-    "test_headed": "npx playwright test --headed"
+    "test": "npx playwright test && npm run report",
+    "test_headed": "npx playwright test --headed && npm run report",
+    "report": "npx playwright show-report"
   },
   "keywords": [],
   "author": "",

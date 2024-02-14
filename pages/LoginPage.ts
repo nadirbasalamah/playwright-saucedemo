@@ -1,16 +1,18 @@
-import { Page } from "@playwright/test";
+import { Locator, Page } from "@playwright/test";
 
 export class LoginPage {
   page: Page;
   usernameInput: string;
   passwordInput: string;
   loginButton: string;
+  errorMessage: string;
 
   constructor(page: Page) {
     this.page = page;
     this.usernameInput = "#user-name";
     this.passwordInput = "#password";
     this.loginButton = "#login-button";
+    this.errorMessage = "//h3[@data-test='error']";
   }
 
   async openLoginPage() {
@@ -22,5 +24,9 @@ export class LoginPage {
     await this.page.fill(this.passwordInput, password);
 
     await this.page.click(this.loginButton);
+  }
+
+  getErrorMessage(): Locator {
+    return this.page.locator(this.errorMessage);
   }
 }
