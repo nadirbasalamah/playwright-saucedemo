@@ -8,6 +8,7 @@ export class HomePage {
   cartItemCounter: string;
   burgerMenuButton: string;
   logoutButton: string;
+  cartButton: string;
 
   constructor(page: Page) {
     this.page = page;
@@ -17,6 +18,7 @@ export class HomePage {
     this.cartItemCounter = ".shopping_cart_badge";
     this.burgerMenuButton = "#react-burger-menu-btn";
     this.logoutButton = "#logout_sidebar_link";
+    this.cartButton = ".shopping_cart_link";
   }
 
   getPageTitle(): Locator {
@@ -39,7 +41,15 @@ export class HomePage {
     await this.page.click(this.removeFromCartButton);
   }
 
+  async clickCartButton() {
+    await this.page.click(this.cartButton);
+  }
+
   getCartItemCounter(): Locator {
     return this.page.locator(this.cartItemCounter);
+  }
+
+  async proceedToCheckout() {
+    await this.page.click(this.cartButton);
   }
 }
