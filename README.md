@@ -27,3 +27,4 @@ npm run test_headed
 ## Notes
 
 1. This web automation testing use chromium based browser (e.g. Google Chrome).
+2. The web application that is used in this automation project is [Saucedemo Web Application](https://www.saucedemo.com/).
