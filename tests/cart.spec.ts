@@ -12,7 +12,7 @@ test("add item to the cart", async ({ page }) => {
   await homePage.addToCart();
   const cartItemCounter = homePage.getCartItemCounter();
 
-  expect(cartItemCounter).toHaveText("1");
+  await expect(cartItemCounter).toHaveText("1");
 });
 
 test("remove item from the cart", async ({ page }) => {

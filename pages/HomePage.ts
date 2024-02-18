@@ -6,6 +6,8 @@ export class HomePage {
   addToCartButton: string;
   removeFromCartButton: string;
   cartItemCounter: string;
+  burgerMenuButton: string;
+  logoutButton: string;
 
   constructor(page: Page) {
     this.page = page;
@@ -13,10 +15,20 @@ export class HomePage {
     this.addToCartButton = "#add-to-cart-sauce-labs-backpack";
     this.removeFromCartButton = "#remove-sauce-labs-backpack";
     this.cartItemCounter = ".shopping_cart_badge";
+    this.burgerMenuButton = "#react-burger-menu-btn";
+    this.logoutButton = "#logout_sidebar_link";
   }
 
   getPageTitle(): Locator {
     return this.page.locator(this.pageTitle);
+  }
+
+  async clickBurgerMenu() {
+    await this.page.click(this.burgerMenuButton);
+  }
+
+  async logout() {
+    await this.page.click(this.logoutButton);
   }
 
   async addToCart() {

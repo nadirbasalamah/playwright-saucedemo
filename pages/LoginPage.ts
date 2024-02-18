@@ -2,6 +2,7 @@ import { Locator, Page } from "@playwright/test";
 
 export class LoginPage {
   page: Page;
+  pageTitle: string;
   usernameInput: string;
   passwordInput: string;
   loginButton: string;
@@ -9,10 +10,15 @@ export class LoginPage {
 
   constructor(page: Page) {
     this.page = page;
+    this.pageTitle = ".login_logo";
     this.usernameInput = "#user-name";
     this.passwordInput = "#password";
     this.loginButton = "#login-button";
     this.errorMessage = "//h3[@data-test='error']";
+  }
+
+  getPageTitle(): Locator {
+    return this.page.locator(this.pageTitle);
   }
 
   async openLoginPage() {
