@@ -9,6 +9,7 @@ export class HomePage {
   burgerMenuButton: string;
   logoutButton: string;
   cartButton: string;
+  singleProductTitle: string;
 
   constructor(page: Page) {
     this.page = page;
@@ -19,10 +20,23 @@ export class HomePage {
     this.burgerMenuButton = "#react-burger-menu-btn";
     this.logoutButton = "#logout_sidebar_link";
     this.cartButton = ".shopping_cart_link";
+    this.singleProductTitle = "#item_4_title_link";
   }
 
   getPageTitle(): Locator {
     return this.page.locator(this.pageTitle);
+  }
+
+  async getProductsCard(): Promise<Locator[]> {
+    const productsCard = await this.page
+      .locator(".inventory_list > .inventory_item")
+      .all();
+
+    return productsCard;
+  }
+
+  async openProductDetail() {
+    await this.page.click(this.singleProductTitle);
   }
 
   async clickBurgerMenu() {
