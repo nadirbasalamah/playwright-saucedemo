@@ -2,6 +2,49 @@
 
 Automation testing for Saucedemo web application using Playwright.
 
+## Test Cases
+
+This is the list of test cases for this project.
+
+### Login
+
+| **No** | **Description**                            |
+| ------ | ------------------------------------------ |
+| 1      | User can login with valid credentials      |
+| 2      | User cannot login with invalid credentials |
+| 3      | User cannot login with empty credentials   |
+| 4      | User cannot login with locked account      |
+
+### Logout
+
+| **No** | **Description** |
+| ------ | --------------- |
+| 1      | User can logout |
+
+### Products
+
+| **No** | **Description**                                                      |
+| ------ | -------------------------------------------------------------------- |
+| 1      | User can view all products                                           |
+| 2      | User cannot view all products without login                          |
+| 3      | User can view product details with valid product ID                  |
+| 4      | User cannot view product details with valid product ID without login |
+| 5      | User cannot view product details with invalid product ID             |
+
+### Cart
+
+| **No** | **Description**                    |
+| ------ | ---------------------------------- |
+| 1      | User can add item to the cart      |
+| 2      | User can remove item from the cart |
+
+### Checkout
+
+| **No** | **Description**                                            |
+| ------ | ---------------------------------------------------------- |
+| 1      | User can perform checkout by filling checkout form         |
+| 2      | User cannot perform checkout without filling checkout form |
+
 ## How to Use
 
 1. Clone this repository.
