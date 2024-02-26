@@ -67,6 +67,19 @@ Use this command to run the test in headed mode. Headed mode means the browser a
 npm run test_headed
 ```
 
+## Test Result
+
+The test result indicates all the key features are implemented correctly. This is the test report generated with [Allure](https://allurereport.org/).
+
+Overall report.
+![Overall report](./docs/overall_report.png)
+
+List of tested features
+![Feature report](./docs/features_report.png)
+
+Test Reports in Graph
+![Graph report](./docs/graph_report.png)
+
 ## Notes
 
 1. This web automation testing use chromium based browser (e.g. Google Chrome).
