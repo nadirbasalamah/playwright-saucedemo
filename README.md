@@ -53,6 +53,8 @@ This is the list of test cases for this project.
 
 ```sh
 npm install
+
+npx playwright install
 ```
 
 3. Run the test.

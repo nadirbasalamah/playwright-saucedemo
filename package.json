@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test && npx allure serve allure-results",
-    "test_headed": "npx playwright test --headed && npx allure serve allure-results",
+    "test": "npx playwright test && npm run view_report",
+    "test_headed": "npx playwright test --headed && npm run view_report",
+    "view_report": "npx allure generate allure-results --clean && npx allure open",
     "report": "npx playwright show-report"
   },
   "keywords": [],
@@ -14,7 +15,7 @@
   "devDependencies": {
     "@playwright/test": "^1.41.2",
     "@types/node": "^20.11.17",
-    "allure-commandline": "^2.27.0",
-    "allure-playwright": "^2.12.2"
+    "allure-commandline": "^2.33.0",
+    "allure-playwright": "^3.2.1"
   }
 }

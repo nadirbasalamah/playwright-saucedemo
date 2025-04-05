@@ -1,5 +1,5 @@
 import { defineConfig, devices } from "@playwright/test";
-import { testPlanFilter } from "allure-playwright/dist/testplan";
+import { testPlanFilter } from "allure-playwright/testplan";
 
 /**
  * Read environment variables from file.
